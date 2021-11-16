@@ -1,38 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from 'react';
+import { Button, DatePicker, Calendar } from 'antd';
+// import format from 'dayjs';
+// import { DatePicker } from './components';
+import './App.less';
 
-type Props = {
-  test: string;
-};
-
-const App = ({ test }: Props) => (
+const App: FC = () => (
   <div className='App'>
-    <header className='App-header'>
-      <img src={logo} className='App-logo' alt='logo' />
-      <p>
-        Edit <code>src/App.tsx</code>
-        and save to reload.
-        {test}
-      </p>
-
-      <a
-        className='App-link'
-        href='https://reactjs.org'
-        target='_blank'
-        rel='noopener noreferrer'>
-        Learn React
-      </a>
-    </header>
+    <Button type='primary'>Button</Button>
+    <DatePicker />
+    <Calendar />
   </div>
 );
 
 export default App;
 
 /**
- * Follow :
+ * BoilerPlate tools as Follows:
+ *
+ * CRA: using Ts template
  * https://create-react-app.dev/
+ *
+ * Eslint, Prettier and Husky integration
  * https://karthickragavendran.medium.com/protect-react-codebase-with-eslint-prettier-typescript-lint-staged-and-husky-9dd549bdb1c
  *
  * For Non-Ts
  * https://dev.to/ankitt8/setting-up-eslint-airbnb-configuration-prettier-and-husky-pre-commit-hooks-in-cra-5dbo
+ *
+ * Design Tool: Ant Design
+ * https://ant.design/docs/react/use-with-create-react-app
+ *
+ * Default Ant Theme Customization
+ * https://ant.design/docs/react/customize-theme
+ *
+ * Replace Default MomentJS with Dayjs in Antd
+ * https://ant.design/docs/react/replace-moment
+ *
  */

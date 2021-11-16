@@ -19,6 +19,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'security'],
+  settings: {
+    'import/core-modules': ['dayjs'],
+  },
   rules: {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
@@ -27,6 +30,7 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
