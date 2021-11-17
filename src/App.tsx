@@ -1,15 +1,32 @@
 import React, { FC } from 'react';
-import { Button, DatePicker, Calendar } from 'antd';
+import { Button, DatePicker, Calendar, Layout, ConfigProvider } from 'antd';
+
+// another way of using dayJs with antdesign by default it is using momentjs
 // import format from 'dayjs';
 // import { DatePicker } from './components';
+
 import './App.less';
+import enUS from 'antd/lib/locale/en_US';
+// import zhCN from 'antd/lib/locale/zh_CN';
+
+const { Header, Footer, Content } = Layout;
 
 const App: FC = () => (
-  <div className='App'>
-    <Button type='primary'>Button</Button>
-    <DatePicker />
-    <Calendar />
-  </div>
+  <ConfigProvider locale={enUS} direction='ltr'>
+    <div className='App'>
+      <Layout>
+        <Header>
+          <DatePicker />
+        </Header>
+        <Content>
+          <Calendar />
+        </Content>
+        <Footer>
+          <Button type='primary'>Button</Button>
+        </Footer>
+      </Layout>
+    </div>
+  </ConfigProvider>
 );
 
 export default App;
